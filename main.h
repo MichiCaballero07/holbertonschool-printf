@@ -12,16 +12,15 @@
  * @fun: argument for the function
  * @print: a type of argument
  */
-typedef struct print
+typedef struct printf
 {
-char e
-int (*fun)(va_list arg);
-}print_f
+		char e;
+int (*funtion)(va_list arg);
+}print_f;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int string (va_list s);
-int print_x(va_list x);
+int _process_format(char format, va_list argument);
 
 
 #endif
