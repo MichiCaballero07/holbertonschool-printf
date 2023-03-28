@@ -16,7 +16,7 @@ int print_c(va_list arg)
 	return (1);
 }
 /**
- * print_i;21M - function
+ * print_i - function
  * description - print i and d
  * @arg: argument for the function
  * Return: int
