@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
  * print_c - function
@@ -7,7 +8,7 @@
  *
  * Return: char
  */
-int print_c(va_list arg)
+int print_char(va_list arg)
 {
 	char i = va_arg(arg, int);
 
@@ -21,7 +22,7 @@ int print_c(va_list arg)
  * @arg: argument for the function
  * Return: int
  */
-int print_i(va_list arg)
+int print_int(va_list arg)
 {
 	unsigned int n;
 	int i, d, l;
@@ -58,7 +59,7 @@ int print_i(va_list arg)
  * @arg: argument for the function
  * Return: string
  */
-int print_s(va_list arg)
+int print_string(va_list arg)
 {
 	char *s = va_arg(arg, char *);
 	int i = 0;
@@ -72,4 +73,14 @@ int print_s(va_list arg)
 		_putchar(s[i]);
 
 	return (i);
+}
+/**
+ * _putchar - function
+ * @c: argument for the function
+ *
+ * Return: 0
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
