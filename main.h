@@ -12,7 +12,7 @@ int _printf(const char *format, ...);
 int print_string(va_list arg);
 int print_char(va_list arg);
 int print_int(va_list arg);
-void witch(const char *p, va_list arg, int *n);
-int print_unsigned_int(va_list arg);
+int witch(const char *p, va_list arg, int *n);
+
 
 #endif
