@@ -52,11 +52,6 @@ void witch(const char *p, va_list arg, int *n)
 		case '%':
 			_putchar('%'), *n++;
 			break;
-		/**
-		case 'u':
-			*n += print_unsigned_int(arg);
-			break;
-			**/
 		case 'i':
 		case 'd':
 			*n += print_int(arg);
