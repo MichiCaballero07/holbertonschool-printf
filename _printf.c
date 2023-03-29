@@ -18,12 +18,8 @@ int _printf(const char *format, ...)
 	va_start(arg, format);
 	for (p = format; *p; p++)
 	{
-		if (*p == '%' && *p + 1 == '\0')
-			return (-1);
-		else if (*p == '%' && *p + 1 != '%')
-		{
+		if (*p == '%')
 			witch(++p, arg, &n);
-		}
 		else
 			_putchar(*p), n++;
 	}
@@ -38,7 +34,7 @@ int _printf(const char *format, ...)
  * @arg: variadic list
  * @n: counter
  */
-void witch(const char *p, va_list arg, int *n)
+int witch(const char *p, va_list arg, int *n)
 {
 	switch (*p)
 	{
@@ -51,6 +47,8 @@ void witch(const char *p, va_list arg, int *n)
 		case '%':
 			_putchar('%'), *n += 1;
 			break;
+		case '\0':
+			return (-1);
 		case 'i':
 		case 'd':
 			*n += print_int(arg);
@@ -58,4 +56,5 @@ void witch(const char *p, va_list arg, int *n)
 		default:
 			_putchar('%'), _putchar(*p), *n += 2;
 	}
+	return (0);
 }
