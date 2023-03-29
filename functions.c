@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * print_c - function
+ * print_char - function
  * description - print a character
  * @arg: argument for the function
  *
@@ -17,7 +17,7 @@ int print_char(va_list arg)
 	return (1);
 }
 /**
- * print_i - function
+ * print_int - function
  * description - print i and d
  * @arg: argument for the function
  * Return: int
@@ -54,7 +54,7 @@ int print_int(va_list arg)
 	return (l);
 }
 /**
- * print_s - function
+ * print_string - function
  * description - print a string
  * @arg: argument for the function
  * Return: string
