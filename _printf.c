@@ -19,7 +19,10 @@ int _printf(const char *format, ...)
 	for (p = format; *p; p++)
 	{
 		if (*p == '%')
-			witch(++p, arg, &n);
+		{
+			if (witch(++p, arg, &n) == -1)
+				return (-1);
+		}
 		else
 			_putchar(*p), n++;
 	}
@@ -40,6 +43,8 @@ int witch(const char *p, va_list arg, int *n)
 {
 	switch (*p)
 	{
+		case '\0':
+			return (-1);
 		case 's':
 			*n += print_string(arg);
 			break;
@@ -49,8 +54,6 @@ int witch(const char *p, va_list arg, int *n)
 		case '%':
 			_putchar('%'), *n += 1;
 			break;
-		case '\0':
-			return (-1);
 		case 'i':
 		case 'd':
 			*n += print_int(arg);
