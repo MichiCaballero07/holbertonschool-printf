@@ -33,6 +33,8 @@ int _printf(const char *format, ...)
  * @p: Pointer to a string(format)
  * @arg: variadic list
  * @n: counter
+ *
+ * Return: if no 0 errors else -1
  */
 int witch(const char *p, va_list arg, int *n)
 {
