@@ -22,7 +22,6 @@ int _printf(const char *format, ...)
 			return (-1);
 		else if (*p == '%' && *p + 1 != '%')
 		{
-			n++;
 			witch(++p, arg, &n);
 		}
 		else
@@ -50,7 +49,7 @@ void witch(const char *p, va_list arg, int *n)
 			*n += print_char(arg);
 			break;
 		case '%':
-			_putchar(*p), *n++;
+			_putchar(*p), *n += 1;
 			break;
 		case 'i':
 		case 'd':
