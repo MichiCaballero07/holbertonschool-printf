@@ -40,7 +40,6 @@ int _printf(const char *format, ...)
  */
 void witch(const char *p, va_list arg, int *n)
 {
-	*n += 1;
 	switch (*p)
 	{
 		case 's':
