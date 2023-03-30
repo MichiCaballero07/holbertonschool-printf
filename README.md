@@ -27,3 +27,9 @@ Repo:
 
 GitHub repository: holbertonschool-printf
 2. Just because it's in print doesn't mean it's the gospel
+Create a man page for your function.
+
+Repo:
+
+GitHub repository: holbertonschool-printf
+File: man_3_printf
