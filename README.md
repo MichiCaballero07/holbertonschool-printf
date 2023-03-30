@@ -26,3 +26,4 @@ You don’t have to handle the length modifiers
 Repo:
 
 GitHub repository: holbertonschool-printf
+2. Just because it's in print doesn't mean it's the gospel
